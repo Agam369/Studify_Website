@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b67ffd6bc6.js" crossorigin="anonymous"></script>
+    <title>Studify | Learning Made Easy</title>
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        ::selection {
+            background-color: rgb(229, 112, 50);
+            color: white;
+        }
+
+        /* Whole Header CSS */
+        .header {
+            height: 15vh;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+            border-bottom: 2px solid black;
+        }
+
+        .logo h1 {
+            color: orangered;
+            position: relative;
+            left: 0;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 7vw;
+            top: -2.5vh;
+            height: 90px;
+            width: 100px;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5vh;
+            left: 5vw;
+            width: 15vw;
+            height: 10vh;
+        }
+
+        .navbar {
+            position: absolute;
+            height: 50px;
+            top: 45%;
+            left: 20%;
+        }
+
+        .navbar a {
+            color: #2E3856;
+            padding: 9px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.5s;
+        }
+
+        .navbar a:hover {
+            color: orangered;
+            text-decoration: underline;
+            text-decoration-color: orangered;
+        }
+
+        #demo-btn {
+            width: 10%;
+            background-color: rgb(238, 100, 50);
+            color: white;
+            border-radius: 5px;
+        }
+
+        #demo-btn:hover {
+            border-bottom: none;
+            background-color: orangered;
+        }
+
+        .right-navbar {
+            position: absolute;
+            left: 70%;
+            top: 45%;
+            width: 30%;
+        }
+
+        #searchbar {
+            background-color: #f6f7fb;
+            height: 70%;
+            width: 40%;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+            position: relative;
+            top: 5px;
+            margin-right: 10px;
+        }
+
+        #searchbar::placeholder {
+            color: #2E3856;
+            font-weight: 500;
+            padding: 5px;
+        }
+
+        .login-btn {
+            padding: 10px;
+            color: #2E3856;
+            text-decoration: none;
+            position: absolute;
+            left: 75%;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .login-btn:hover {
+            background-color: #f6f7fb;
+        }
+
+        .signup-btn {
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            background-color: #ffcd17;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            position: absolute;
+            left: 55%;
+        }
+
+        .signup-btn:hover {
+            background-color: #f5d151;
+        }
+
+
+        .sidebar {
+            width: 15vw;
+            padding-left: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: rgb(229, 112, 50);
+
+        }
+
+        ul.sublist {
+            padding-left: 30px;
+        }
+
+        .main {
+            position: absolute;
+            top: 100px;
+            left: 15vw;
+            width: 83.9vw;
+            border-left: 1px solid black;
+            height: auto;
+        }
+
+        .main {
+            padding: 20px;
+            border-left: 2px solid black;
+        }
+
+        .main hr {
+            border-top: 2px solid rgb(238, 100, 50);
+        }
+
+        .main dd {
+            padding-left: 20px;
+        }
+
+        ::selection {
+            background-color: rgb(229, 112, 50);
+            color: white;
+        }
+
+        .main ol {
+            padding-left: 20px;
+        }
+
+        .main h1,
+        h2,
+        h3,
+        h4 {
+            color: rgb(238, 100, 50);
+        }
+
+        .formulae-img {
+            border: 5px solid rgb(229, 112, 50);
+
+        }
+
+        .examples-div h3 {
+            font-size: 36px;
+        }
+
+        .examples-div {
+            margin-top: 50px;
+        }
+
+        .question {
+            border: 5px solid rgb(229, 112, 50);
+        }
+
+        .practice-div {
+            margin-top: 50px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover+.hide {
+            display: block;
+            color: rgb(238, 100, 50);
+        }
+
+        .foot {
+            margin-top: 5%;
+            background-color: rgb(229, 112, 50);
+            display: none;
+
+        }
+
+        .foot ul {
+            list-style: none;
+        }
+
+        .foot li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .foot p {
+            color: white;
+        }
+
+        @media screen and (max-width: 500px) and (min-width: 400px) {
+            .logo img {
+                left: 23vw;
+            }
+
+            .banner-img-small {
+                left: 10%;
+                width: 80%;
+            }
+
+            .banner-heading {
+                top: 25%;
+            }
+
+            .feature-container {
+                margin-top: 50%;
+            }
+
+            .item {
+                width: 100%;
+            }
+
+            #review-h1-div {
+                margin-top: 177%;
+                left: 7.5%;
+            }
+
+            .review-container {
+                margin-top: 170%;
+            }
+
+            .review {
+                width: 100%;
+                margin: 2%;
+            }
+
+            .download-on {
+                margin-top: 340%;
+                left: 5%;
+            }
+
+            .footer {
+                margin-top: 350%;
+                height: 25%;
+            }
+
+            .right-footbar {
+                margin-top: 20%;
+                width: 80%;
+                left: 12.5%;
+            }
+
+            .footbar {
+                top: 15vh;
+                left: 3vw;
+            }
+
+            .navbar {
+                top: 75%;
+                left: 0;
+            }
+
+            .right-navbar {
+                top: 25%;
+                left: 46.5%;
+                width: 55%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+
+
+
+        }
+
+        @media screen and (max-width: 600px) and (min-width: 500px) {
+            .logo img {
+                left: 18vw;
+                bottom: 2vw;
+            }
+
+            .banner-img-small {
+                left: 10%;
+                width: 80%;
+            }
+
+            .banner-heading {
+                top: 25%;
+            }
+
+            .feature-container {
+                margin-top: 50%;
+            }
+
+            .item {
+                width: 100%;
+            }
+
+            #review-h1-div {
+                margin-top: 150%;
+                left: 7.5%;
+            }
+
+            .review-container {
+                margin-top: 151%;
+            }
+
+            .review {
+                width: 100%;
+                margin: 2%;
+            }
+
+            .download-on {
+                margin-top: 285%;
+                left: 5%;
+            }
+
+            .footer {
+                margin-top: 290%;
+                height: 25%;
+            }
+
+            .right-footbar {
+                margin-top: 20%;
+                width: 80%;
+                left: 12.5%;
+            }
+
+            .footbar {
+                top: 15vh;
+                left: 3vw;
+            }
+
+            .navbar {
+                top: 75%;
+                left: 0;
+            }
+
+            .right-navbar {
+                top: 25%;
+                left: 46.5%;
+                width: 55%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .logo img {
+                left: 30vw;
+            }
+
+            .header {
+                height: 25vh;
+                border-bottom: 2px solid black;
+            }
+
+
+            .navbar {
+                top: 50%;
+                left: 5%;
+            }
+
+            #demo-btn {
+                width: 5%;
+            }
+
+            .right-navbar {
+                top: 75%;
+                left: 5%;
+                width: 75%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+
+            .main {
+                left: 0;
+                width: 100%;
+                top: 25vh;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .examples-div {
+                margin-top: 2.5%;
+            }
+
+            img {
+                width: 95%;
+                height: 50vh;
+            }
+
+            .foot {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>Studify</h1>
+                <img src="images/favicon.webp" alt="">
+            </a>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Subjects</a>
+            <a href="about-founder.html">About Founder</a>
+            <a href="profit-loss.html" id="demo-btn">Chapters <i class="fa-solid fa-angle-down"></i></a>
+        </div>
+        <div class="right-navbar">
+            <input type="text" name="" id="searchbar" placeholder="Study sets, textbook...">
+            <a href="#" class="login-btn">Log in</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h1>Contents</h1>
+        <ul>
+            <li><a href="profit-loss.html">Profit and Loss</a></li>
+            <hr>
+            <li><a href="number-system.html">Number System</a></li>
+            <hr>
+            <li><a href="mensuration.html">Mensuration</a></li>
+            <hr>
+            <li><a href="math-facts.html">Facts about Maths</a></li>
+            <hr>
+            <li><a href="different-mathematicians.html">Different Mathematicians</a></li>
+            <hr>
+        </ul>
+    </div>
+    <div class="main">
+        <center>
+            <h1>Types of Numbers</h1>
+        </center>
+        <p>In mathematics, we need to know about the different types of numbers that we are dealing with.
+            There are numbers like 1, 2, 3, ... etc., ones like 0.33333... , or ones like 5/7.
+            We introduce students to these gradually, and each new type comes with its own uses, and its own
+            challenges.The main types of numbers used in school mathematics are listed below:</p>
+        <br>
+        <hr><br>
+        <ol>
+            <li>Natural Numbers (N), (also called positive integers, counting numbers, or natural numbers); They are the
+                numbers {1, 2, 3, 4, 5, …}</li>
+            <li>Whole Numbers (W). This is the set of natural numbers, plus zero, i.e., {0, 1, 2, 3, 4, 5, …}.</li>
+            <li>Integers (Z). This is the set of all whole numbers plus all the negatives (or opposites) of the natural
+                numbers, i.e., {… , ⁻2, ⁻1, 0, 1, 2, …}</li>
+            <li>Rational numbers (Q). This is all the fractions where the top and bottom numbers are integers; e.g.,
+                1/2, 3/4, 7/2, ⁻4/3, 4/1 [Note: The denominator cannot be 0, but the numerator can be].</li>
+            <li>Real numbers (R), (also called measuring numbers or measurement numbers). This includes all numbers that
+                can be written as a decimal. This includes fractions written in decimal form e.g., 0.5, 0.75 2.35,
+                ⁻0.073, 0.3333, or 2.142857. It also includes all the irrational numbers such as π, √2 etc. Every real
+                number corresponds to a point on the number line.</li>
+        </ol><br>
+        <hr><br>
+        <div id="numbers">
+            <img src="images/numbers.png" alt="">
+        </div>
+        <br>
+        <hr><br>
+        <p>The natural numbers are also divided into the following categories:-</p>
+        <ol>
+            <li>Prime no:- A natural number greater than 1 which has only 1 and itself as factors. eg. 2, 3, 13, 97
+            </li>
+            <li>Composite no:- A natural number greater than 1 which has more factors than 1 and itself. eg. 4, 9, 69,
+                93</li>
+            <li>Even no:- A natural number that comes on the table of 2. eg. 2, 46, 9404, 30228</li>
+            <li>Odd no:- A natural number that doesn't come on the table of 2. eg. 1, 3, 101, 10291</li>
+            <li>Co-prime nos:- Numbers whose greatest factor is 1 are pair of co-prime numbers. eg. (2, 3); (49, 25);
+                (18, 91)</li>
+        </ol>
+        <div class="foot">
+            <p>to see other topics:-</p>
+            <ul>
+                <li><a href="profit-loss.html">Profit and Loss</a></li>
+                <hr>
+                <li><a href="number-system.html">Number System</a></li>
+                <hr>
+                <li><a href="mensuration.html">Mensuration</a></li>
+                <hr>
+                <li><a href="math-facts.html">Facts about Maths</a></li>
+                <hr>
+                <li><a href="different-mathematicians.html">Different Mathematicians</a></li>
+                <hr>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b67ffd6bc6.js" crossorigin="anonymous"></script>
+    <title>Studify | Learning Made Easy</title>
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        ::selection {
+            background-color: rgb(229, 112, 50);
+            color: white;
+        }
+
+        /* Whole Header CSS */
+        .header {
+            height: 15vh;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+            border-bottom: 2px solid black;
+        }
+
+        .logo h1 {
+            color: orangered;
+            position: relative;
+            left: 0;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 7vw;
+            top: -2.5vh;
+            height: 90px;
+            width: 100px;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5vh;
+            left: 5vw;
+            width: 15vw;
+            height: 10vh;
+        }
+
+        .navbar {
+            position: absolute;
+            height: 50px;
+            top: 45%;
+            left: 20%;
+        }
+
+        .navbar a {
+            color: #2E3856;
+            padding: 9px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.5s;
+        }
+
+        .navbar a:hover {
+            color: orangered;
+            text-decoration: underline;
+            text-decoration-color: orangered;
+        }
+
+        #demo-btn {
+            width: 10%;
+            background-color: rgb(238, 100, 50);
+            color: white;
+            border-radius: 5px;
+        }
+
+        #demo-btn:hover {
+            border-bottom: none;
+            background-color: orangered;
+        }
+
+        .right-navbar {
+            position: absolute;
+            left: 70%;
+            top: 45%;
+            width: 30%;
+        }
+
+        #searchbar {
+            background-color: #f6f7fb;
+            height: 70%;
+            width: 40%;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+            position: relative;
+            top: 5px;
+            margin-right: 10px;
+        }
+
+        #searchbar::placeholder {
+            color: #2E3856;
+            font-weight: 500;
+            padding: 5px;
+        }
+
+        .login-btn {
+            padding: 10px;
+            color: #2E3856;
+            text-decoration: none;
+            position: absolute;
+            left: 75%;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .login-btn:hover {
+            background-color: #f6f7fb;
+        }
+
+        .signup-btn {
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            background-color: #ffcd17;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            position: absolute;
+            left: 55%;
+        }
+
+        .signup-btn:hover {
+            background-color: #f5d151;
+        }
+
+
+        .sidebar {
+            width: 15vw;
+            height: 175vh;
+            padding-left: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: rgb(229, 112, 50);
+
+        }
+
+        ul.sublist {
+            padding-left: 30px;
+        }
+
+        .main {
+            position: absolute;
+            top: 100px;
+            left: 15vw;
+            width: 83.9vw;
+            border: 1px solid black;
+        }
+
+        .main {
+            padding: 20px;
+            border-left: 2px solid black;
+        }
+
+        .main hr {
+            border-top: 2px solid rgb(238, 100, 50);
+        }
+
+        .main dd {
+            padding-left: 20px;
+        }
+
+        ::selection {
+            background-color: rgb(229, 112, 50);
+            color: white;
+        }
+
+        .main ol {
+            padding-left: 20px;
+        }
+
+        .main h1,
+        h2,
+        h3,
+        h4 {
+            color: rgb(238, 100, 50);
+        }
+
+        .formulae-img {
+            border: 5px solid rgb(229, 112, 50);
+
+        }
+
+        .examples-div h3 {
+            font-size: 36px;
+        }
+
+        .examples-div {
+            margin-top: 50px;
+        }
+
+        .question {
+            border: 5px solid rgb(229, 112, 50);
+        }
+
+        .practice-div {
+            margin-top: 50px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover+.hide {
+            display: block;
+            color: rgb(238, 100, 50);
+        }
+        
+        .foot {
+            margin-top: 5%;
+            background-color: rgb(229, 112, 50);
+            display: none;
+            
+        }
+
+        .foot ul{
+            list-style: none;
+        }
+        
+        .foot li a {
+            text-decoration: none;
+            color:white;
+        }
+        
+        .foot p {
+            color: white;
+        }
+        
+        @media screen and (max-width: 500px) and (min-width: 400px) {
+            .logo img {
+                left: 23vw;
+            }
+
+            .banner-img-small {
+                left: 10%;
+                width: 80%;
+            }
+
+            .banner-heading {
+                top: 25%;
+            }
+
+            .feature-container {
+                margin-top: 50%;
+            }
+
+            .item {
+                width: 100%;
+            }
+
+            #review-h1-div {
+                margin-top: 177%;
+                left: 7.5%;
+            }
+
+            .review-container {
+                margin-top: 170%;
+            }
+
+            .review {
+                width: 100%;
+                margin: 2%;
+            }
+
+            .download-on {
+                margin-top: 340%;
+                left: 5%;
+            }
+
+            .footer {
+                margin-top: 350%;
+                height: 25%;
+            }
+
+            .right-footbar {
+                margin-top: 20%;
+                width: 80%;
+                left: 12.5%;
+            }
+
+            .footbar {
+                top: 15vh;
+                left: 3vw;
+            }
+
+            .navbar {
+                top: 75%;
+                left: 0;
+            }
+
+            .right-navbar {
+                top: 25%;
+                left: 46.5%;
+                width: 55%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+            
+            
+
+        }
+
+        @media screen and (max-width: 600px) and (min-width: 500px) {
+            .logo img {
+                left: 18vw;
+                bottom: 2vw;
+            }
+
+            .banner-img-small {
+                left: 10%;
+                width: 80%;
+            }
+
+            .banner-heading {
+                top: 25%;
+            }
+
+            .feature-container {
+                margin-top: 50%;
+            }
+
+            .item {
+                width: 100%;
+            }
+
+            #review-h1-div {
+                margin-top: 150%;
+                left: 7.5%;
+            }
+
+            .review-container {
+                margin-top: 151%;
+            }
+
+            .review {
+                width: 100%;
+                margin: 2%;
+            }
+
+            .download-on {
+                margin-top: 285%;
+                left: 5%;
+            }
+
+            .footer {
+                margin-top: 290%;
+                height: 25%;
+            }
+
+            .right-footbar {
+                margin-top: 20%;
+                width: 80%;
+                left: 12.5%;
+            }
+
+            .footbar {
+                top: 15vh;
+                left: 3vw;
+            }
+
+            .navbar {
+                top: 75%;
+                left: 0;
+            }
+
+            .right-navbar {
+                top: 25%;
+                left: 46.5%;
+                width: 55%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .logo img {
+                left: 30vw;
+            }
+
+            .header {
+                height: 25vh;
+                border-bottom: 2px solid black;
+            }
+
+
+            .navbar {
+                top: 50%;
+                left: 5%;
+            }
+
+            #demo-btn {
+                width: 5%;
+            }
+
+            .right-navbar {
+                top: 75%;
+                left: 5%;
+                width: 75%;
+            }
+
+            .signup-btn {
+                left: 45%;
+            }
+
+            .main {
+                left: 0;
+                width: 100%;
+                top: 25vh;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .examples-div {
+                margin-top: 2.5%;
+            }
+            
+            img {
+                width: 95%;
+                height: 50vh;
+            }
+            .foot {
+                display:block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>Studify</h1>
+                <img src="images/favicon.webp" alt="">
+            </a>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Subjects</a>
+            <a href="about-founder.html">About Founder</a>
+            <a href="profit-loss.html" id="demo-btn">Chapters <i class="fa-solid fa-angle-down"></i></a>
+        </div>
+        <div class="right-navbar">
+            <input type="text" name="" id="searchbar" placeholder="Study sets, textbook...">
+            <a href="#" class="login-btn">Log in</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h1>Contents</h1>
+        <ul>
+            <li><a href="profit-loss.html">Profit and Loss</a></li>
+            <hr>
+            <li><a href="number-system.html">Number System</a></li>
+            <hr>
+            <li><a href="mensuration.html">Mensuration</a></li>
+            <hr>
+            <li><a href="math-facts.html">Facts about Maths</a></li>
+            <hr>
+            <li><a href="different-mathematicians.html">Different Mathematicians</a></li>
+            <hr>
+        </ul>
+    </div>
+    <div class="main">
+        <center>
+            <h1>Mensuration</h1>
+        </center>
+        <p>Mensuration is the branch of mathematics that studies the measurement of geometric figures and their
+            parameters like length, volume, shape, surface area, lateral surface area, etc. In our earlier classes, we
+            have learnt to find the perimeter and area of various plane figures like rectangle, square, triangle,
+            parallelogram and rhombus. We have also learnt to find areas of pathways. Now,we will learn to calculate the
+            areas of some more plane figures. We will also learn to find the surface area and volume of some solids,
+            such as cuboid, cube and cylinder.</p>
+        <br>
+        <hr><br>
+        <h4>The terms related to Mensuration are:-</h4>
+        <dl>
+            <dt>Perimeter</dt>
+            <dd>- It is the total distance around the shape or the length of the boundary of any closed shape.</dd>
+            <dt>Area</dt>
+            <dd>- Area is the amount of space occupied by a two-dimensional figure. It is expressed in square units.
+            </dd>
+            <dt>Surface Area</dt>
+            <dd>- Surface Area is the total area occupied by the surfaces of a 3D object. They are classified into two -
+                Curved or Lateral Surface Area and Total Surface Area.</dd>
+            <dt>Volume</dt>
+            <dd>- It is the amount of space occupied by a 3D shape. It is expressed in cubic units.
+            </dd>
+            <dt>Dimensions</dt>
+            <dd>- they are the measurement of the length, width or height of some object.</dd>
+        </dl>
+        <br>
+        <hr><br>
+        <h4>Uses of Mensuration</h4>
+        <p>Mensuration is an important topic with high applicability in real-life scenarios. Given below are some of the
+            scenarios.
+            <ol>
+                <li>Measurement of agricultural fields, floor areas required for purchase/selling transactions.</li>
+                <li>Measurement of volumes required for packaging milk, liquids, solid edible food items.</li>
+                <li>Measurements of surface areas required for estimation of painting houses, buildings, etc.</li>
+                <li>Volumes and heights are useful in knowing water levels and amounts in rivers or lakes.</li>
+                <li>Optimum cost packaging sachets for milk etc. like tetra packing.</li>
+            </ol>
+        </p><br>
+        <hr><br>
+        <h4>3D & 2D figures</h4>
+        <p>The figures which have only length and breadth are called 2-dimensional figures such as circle, square,
+            rectange, triangle etc. And the figures which have all the 3 dimensions length, breadth and height are
+            called 3-dimensional figures such as cone, sphere, cuboic, cube, cylinder etc. </p>
+        <br>
+        <hr><br>
+        <h4>Formulae</h4>
+        <p>There are some formulae of mensuration to find the area, perimeter, surface area, volume of the different
+            figures.</p><br>
+        <hr><br>
+        <p>All formulae of 2D figures are summarized below:-</p>
+        <img src="https://thebasicmaths.com/wp-content/uploads/2020/12/area-and-perimeter-806x1024.jpg" alt=""
+            class="formulae-img">
+        <p>All formualae of 3D figures are summarized below:-</p>
+        <img src="https://mba.hitbullseye.com/sites/default/files/mensarutaion-formula.jpg" alt="" class="formulae-img">
+
+        <div class="examples-div">
+            <h3>Example</h3>
+            <h4>Question: The area of a trapezium shaped field is 480 m2, the distance between two parallel sides is 15 m and one of the parallel sides is 20 m. Find the other parallel side.</h4>
+             <p>   
+                Solution:<br> One of the parallel sides of the trapezium is a = 20 m, let another parallel side be b, height h = 15 m.
+                <br>
+                The given area of trapezium = 480 m2
+                <br>
+                We know, by formula;
+                <br>
+                Area of a trapezium = ½ h (a+b)
+                <br>
+                480 = ½ (15) (20+b)
+                <br>
+                20 + b = (480×2)/15
+                <br>
+                b = 64 – 20 = 44 m
+                <br>
+                Total Surface Area of Solid Shapes
+                <br>
+                TSA of Cuboid = 2(lb + bh + hl)
+                <br>
+                TSA of Cube = 6l2
+                <br>
+                TSA of Cylinder = 2πr (r + h)</p>
+
+        </div>
+        <div class="practice-div">
+            <h3>That's enough! Time for some practice questions now</h3>
+            <ol>
+                <li>Calculate the area of the rectangle whose length is 22 cm and breadth is 17 cm.</li>
+                <li>Find the volume of a right circular cylinder with a base radius of 14 cm and a height of 10 cm.</li>
+                <li>What is the surface area of a cube of edge 18 m?</li>
+            </ol><br><br>
+            <div class="myDIV">Hover over me to get the answers!</div>
+            <div class="hide">
+                1. 374 cm <sup>2</sup>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.
+                6157.52cm<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. Profit % =
+                1944m<sup>2</sup>
+            </div>
+        </div>
+        <div class="foot">
+            <p>to see other topics:-</p>
+            <ul>
+                <li><a href="profit-loss.html">Profit and Loss</a></li>
+                <hr>
+                <li><a href="number-system.html">Number System</a></li>
+                <hr>
+                <li><a href="mensuration.html">Mensuration</a></li>
+                <hr>
+                <li><a href="math-facts.html">Facts about Maths</a></li>
+                <hr>
+                <li><a href="different-mathematicians.html">Different Mathematicians</a></li>
+                <hr>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
